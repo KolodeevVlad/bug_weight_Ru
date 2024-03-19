@@ -1,31 +1,26 @@
 # Bug Weight
 
-## Установка для Google Chrome:
-1. Скачать репозиторий
-2. Открыть [chrome://extensions/]()
-3. Включить режим разработчика
-4. Нажать "Установить распакованное расширение"
-5. Выбрать папку с приложением
+## Installation for Google Chrome:
 
-## Как работает расчет веса ошибки?
-Используется модель расстановки приоритетов 
-[Weighted Shortest Job First (WSJF)](https://en.wikipedia.org/wiki/Shortest_job_next#Weighted_shortest_job_first)
+1. Download the repository
+2. Open [chrome://extensions/]
+3. Enable developer mode
+4. Click "Load unpacked extension"
+5. Choose the folder with the application
 
-Вес (приоритет) высчитывается по формуле: `mass * critical * block`, где:
+## How does the error weight calculation work??
+The weight (priority) is calculated using the formula: mass * critical * block, where:
 
-#### Mass - насколько проблема массовая.
-- 1 - единичные случаи воспроизведения ошибки
-- 2 - затрагивает группу пользователей
-- 3 - затрагивает большое количество пользователей
+#### Mass - How widespread the issue is.
+- 1 Single bug
+- 2 Affects a group of users
+- 3 Affects most users
+#### Block - How much the bug blocks user flow.
+- 1 Not blocking
+- 2 Blocking, but there is a workaround
+- 3 Blocking
+#### Critical - How critical the area of the application where the bug was found is.
+- 1 not critical
+- 3 critical
 
-#### Critical - насколько критичная та область приложения, в которой нашли баг.
-- 1 - не критична
-- 2 - нормально
-- 3 - критична
-
-#### Block - насколько баг блокирует юзер флоу
-- 1 - не блокирует
-- 2 - блокирует, но есть обходное решение
-- 3 - блокирует, нет обходного решения
-
-Максимальный вес - 27, минимальный - 1
+Maximum value - 27, minimum - 1
