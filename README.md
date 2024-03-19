@@ -1,4 +1,4 @@
-# Bug Weight
+# Impact Level
 
 ## Installation for Google Chrome:
 
