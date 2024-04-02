@@ -8,8 +8,8 @@
 4. Click "Load unpacked extension"
 5. Choose the folder with the application
 
-## How does the error weight calculation work??
-The weight (priority) is calculated using the formula: mass * critical * block, where:
+## How does the Impact Level calculation work??
+The Impact Level is calculated using the formula: mass * critical * block, where:
 
 #### Mass - How widespread the issue is.
 - 1 Single bug
