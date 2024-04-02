@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Bug weight",
-    "description": "Bug Weight Calculator",
+    "name": "Impact Level",
+    "description": "Impact Level Calculator",
     "version": "1.0.3",
     "icons": { "128": "icon.png" },
     "browser_action": {
